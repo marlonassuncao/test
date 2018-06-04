@@ -1,0 +1,312 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css";
+@import url(animate.min.css);
+@import url(bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important; }
+
+::selection {
+  color: #ffffff;
+  background: #e5b5ae; }
+
+::-moz-selection {
+  color: #ffffff;
+  background: #e5b5ae; }
+
+.btnav {
+  display: none; }
+
+html ::-webkit-scrollbar {
+  width: 0.6em;
+  height: 0.6em; }
+
+html ::-webkit-scrollbar-thumb {
+  background: #231f20; }
+
+html ::-webkit-scrollbar-track {
+  background: #918f90; }
+
+html body {
+  scrollbar-face-color: #231f20;
+  scrollbar-track-color: #918f90; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  line-height: 16pt;
+  color: #231f20;
+  background: #dcddde url(../images/bg.svg) top center repeat-x;
+  background-size: cover; }
+
+a {
+  transition: all 0.5s;
+  text-decoration: none !important;
+  color: #231f20; }
+  a:hover {
+    color: #e5b5ae; }
+
+button {
+  transition: all 0.5s; }
+
+#header {
+  position: relative;
+  z-index: 9998;
+  float: left;
+  width: 100%;
+  padding: 35px 0;
+  height: 120px; }
+  #header .logo {
+    float: left;
+    width: 100%; }
+    #header .logo img {
+      display: block;
+      width: 200px;
+      max-width: 100%;
+      margin: 0 auto; }
+  #header .nav {
+    float: left;
+    width: 100%;
+    margin-top: 50px; }
+    #header .nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      #header .nav ul li {
+        float: left; }
+        #header .nav ul li a {
+          font-size: 11pt;
+          padding: 10px 15px;
+          text-transform: uppercase;
+          color: #231f20;
+          font-weight: 700; }
+          #header .nav ul li a:hover {
+            color: #e5b5ae; }
+  #header .socials {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 40px; }
+    #header .socials li {
+      margin-right: 8px;
+      float: left; }
+      #header .socials li a {
+        display: block;
+        padding: 0;
+        line-height: 27pt;
+        font-size: 15pt;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: #ffffff;
+        text-align: center;
+        transition: all 0.5s;
+        border: 0;
+        background: #231f20; }
+      #header .socials li:hover .c1 {
+        background: #e5b5ae; }
+      #header .socials li:hover .c2 {
+        background: #b9e3eb; }
+      #header .socials li:hover .c3 {
+        background: #c2badc; }
+
+#slider {
+  width: 100%;
+  float: left; }
+  #slider img {
+    min-width: 100%;
+    max-width: 100%; }
+  #slider h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); }
+
+.section {
+  float: left;
+  width: 100%;
+  padding: 35px 0;
+  text-align: center; }
+  .section h1 {
+    font-weight: 700;
+    font-size: 34pt;
+    text-transform: uppercase;
+    color: #ffffff; }
+  .section strong {
+    font-weight: bold; }
+
+#contato {
+  float: left;
+  width: 100%;
+  padding: 55px 0;
+  text-align: left;
+  color: #231f20;
+  border-top: 1pt solid rgba(220, 221, 222, 0.3); }
+  #contato .contato {
+    background: #ffffff;
+    float: left;
+    width: 100%;
+    padding: 35px;
+    text-align: center;
+    padding-bottom: 0; }
+  #contato p {
+    text-transform: uppercase;
+    font-size: 10.5pt; }
+  #contato h1 {
+    color: #231f20; }
+  #contato form p {
+    margin: 0; }
+  #contato .title {
+    padding-bottom: 35px; }
+  #contato .form-control::-webkit-input-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important; }
+  #contato .form-control::-moz-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important; }
+  #contato .form-control:-ms-input-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important; }
+  #contato .form-control:-moz-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important; }
+  #contato .form-control {
+    font-weight: 700;
+    font-size: 12pt;
+    height: 40pt;
+    margin: 0;
+    transition: all 0.5s;
+    color: #939292;
+    border: 1pt solid #dfdfdf;
+    border-radius: 0;
+    background: #dfdfdf;
+    box-shadow: none; }
+    #contato .form-control:focus {
+      color: #e5b5ae;
+      border-color: #e5b5ae; }
+  #contato textarea.form-control {
+    min-height: 100px;
+    margin-top: 20px;
+    display: block; }
+  #contato .btn {
+    position: absolute;
+    outline: none;
+    font-weight: 700;
+    font-size: 14pt;
+    margin-top: -20px;
+    padding: 0 40px;
+    width: 160px;
+    left: 50%;
+    margin-left: -80px;
+    height: 45pt;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 2.5pt solid #ffffff;
+    border-radius: 0;
+    background: #231f20;
+    transition: all 0.5s;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.3); }
+    #contato .btn:hover {
+      color: #ffffff;
+      background: #e5b5ae;
+      box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.1); }
+  #contato span.wpcf7-not-valid-tip {
+    text-align: left;
+    font-size: 9pt;
+    font-weight: 700; }
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  font-size: 10pt;
+  font-weight: 700;
+  border: 2px solid #c2badc !important;
+  margin: 55px 0 !important; }
+
+#footer {
+  position: relative;
+  margin-top: 55px;
+  float: left;
+  width: 100%;
+  color: #ffffff;
+  background: url(../images/bgfooter.svg) center repeat-x;
+  background-size: cover;
+  height: 40pt; }
+  #footer .marlonassuncao {
+    position: absolute;
+    right: 30px;
+    display: block;
+    width: 20px;
+    top: 20px; }
+    #footer .marlonassuncao img {
+      display: block;
+      transition: all 0.5s;
+      opacity: 0.4; }
+    #footer .marlonassuncao:hover img {
+      opacity: 1; }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  #header .nav ul li a {
+    padding: 10px 12px; } }
+
+@media only screen and (min-width: 0) and (max-width: 992px) {
+  .btnav {
+    font-size: 24pt;
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    right: 20px;
+    display: block;
+    cursor: pointer;
+    color: #e5b5ae; }
+    .btnav:hover {
+      color: #e5b5ae; }
+  #header {
+    height: 60px; }
+    #header .logo {
+      margin-top: 0;
+      height: auto; }
+      #header .logo img {
+        min-width: 130px;
+        max-width: 130px;
+        margin: 0 auto; }
+    #header .nav {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      min-height: 352px;
+      margin-top: 20px;
+      left: 0;
+      padding-top: 130px;
+      background: #e5b5ae; }
+      #header .nav ul {
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        padding: 0;
+        padding: 10px 0;
+        padding-bottom: 20px; }
+        #header .nav ul li {
+          clear: left;
+          width: 100%; }
+          #header .nav ul li a {
+            display: block;
+            font-size: 18pt;
+            width: 100%;
+            padding: 10px;
+            text-align: left;
+            color: #ffffff;
+            text-align: center;
+            border: 0; }
+            #header .nav ul li a:hover {
+              color: #ffffff; }
+  #header .socials {
+    position: absolute;
+    left: 0;
+    top: -62px; }
+  #contato p br {
+    display: none; }
+  #contato .form-control {
+    margin: 20px 0; } }

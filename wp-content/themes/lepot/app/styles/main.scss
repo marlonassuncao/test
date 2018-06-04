@@ -1,0 +1,425 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
+  "animate.min.css", "bootstrap.min.css";
+
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700");
+
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+// variables
+$branco: #ffffff;
+$cinza: #dcddde;
+$cinzamedio: #d2d3d4;
+$cinzaescuro: #231f20;
+$rosa: #e5b5ae;
+$verde: #c0d6c7;
+$azul: #b9e3eb;
+$roxo: #c2badc;
+
+::selection {
+  color: $branco;
+  background: $rosa;
+}
+
+::-moz-selection {
+  color: $branco;
+  background: $rosa;
+}
+
+.btnav {
+  display: none;
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, $branco, 50%)
+) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+  ::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+html {
+  @include scrollbars(0.6em, $cinzaescuro);
+}
+
+// styles
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 12pt;
+  line-height: 16pt;
+  color: $cinzaescuro;
+  background: $cinza url(../images/bg.svg) top center repeat-x;
+  background-size: cover;
+}
+
+a {
+  transition: all 0.5s;
+  text-decoration: none !important;
+  color: $cinzaescuro;
+  &:hover {
+    color: $rosa;
+  }
+}
+
+button {
+  transition: all 0.5s;
+}
+
+// header
+#header {
+  position: relative;
+  z-index: 9998;
+  float: left;
+  width: 100%;
+  padding: 35px 0;
+  height: 120px;
+  .logo {
+    float: left;
+    width: 100%;
+    img {
+      display: block;
+      width: 200px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .nav {
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        float: left;
+        a {
+          font-size: 11pt;
+          padding: 10px 15px;
+          text-transform: uppercase;
+          color: $cinzaescuro;
+          font-weight: 700;
+          &:hover {
+            color: $rosa;
+          }
+        }
+      }
+    }
+  }
+  .socials {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 40px;
+    li {
+      margin-right: 8px;
+      float: left;
+      a {
+        display: block;
+
+        padding: 0;
+        line-height: 27pt;
+        font-size: 15pt;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: $branco;
+        text-align: center;
+        transition: all 0.5s;
+        border: 0;
+        background: $cinzaescuro;
+      }
+      &:hover {
+        .c1 {
+          background: $rosa;
+        }
+        .c2 {
+          background: $azul;
+        }
+        .c3 {
+          background: $roxo;
+        }
+      }
+    }
+  }
+}
+
+// slider
+#slider {
+  width: 100%;
+  float: left;
+  img {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+}
+
+// section
+.section {
+  float: left;
+  width: 100%;
+  padding: 35px 0;
+  text-align: center;
+  h1 {
+    font-weight: 700;
+    font-size: 34pt;
+    text-transform: uppercase;
+    color: $branco;
+  }
+  strong {
+    font-weight: bold;
+  }
+}
+
+// contato
+#contato {
+  float: left;
+  width: 100%;
+  padding: 55px 0;
+  text-align: left;
+  color: $cinzaescuro;
+  border-top: 1pt solid rgba($cinza, 0.3);
+  .contato {
+    background: $branco;
+    float: left;
+    width: 100%;
+    padding: 35px;
+    text-align: center;
+    padding-bottom: 0;
+  }
+  p {
+    text-transform: uppercase;
+    font-size: 10.5pt;
+  }
+  h1 {
+    color: $cinzaescuro;
+  }
+  form {
+    p {
+      margin: 0;
+    }
+  }
+  .title {
+    padding-bottom: 35px;
+  }
+  .form-control::-webkit-input-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important;
+  }
+  .form-control::-moz-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important;
+  }
+  .form-control:-ms-input-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important;
+  }
+  .form-control:-moz-placeholder {
+    text-transform: uppercase;
+    color: #939292 !important;
+  }
+  .form-control {
+    font-weight: 700;
+    font-size: 12pt;
+    height: 40pt;
+    margin: 0;
+    transition: all 0.5s;
+    color: #939292;
+    border: 1pt solid #dfdfdf;
+    border-radius: 0;
+    background: #dfdfdf;
+    box-shadow: none;
+    &:focus {
+      color: $rosa;
+      border-color: $rosa;
+    }
+  }
+  textarea.form-control {
+    min-height: 100px;
+    margin-top: 20px;
+    display: block;
+  }
+  .btn {
+    position: absolute;
+    outline: none;
+    font-weight: 700;
+    font-size: 14pt;
+    margin-top: -20px;
+    padding: 0 40px;
+    width: 160px;
+    left: 50%;
+    margin-left: -80px;
+    height: 45pt;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: $branco;
+    border: 2.5pt solid $branco;
+    border-radius: 0;
+    background: $cinzaescuro;
+    transition: all 0.5s;
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.3);
+    &:hover {
+      color: $branco;
+      background: $rosa;
+      box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.1);
+    }
+  }
+  span.wpcf7-not-valid-tip {
+    text-align: left;
+    font-size: 9pt;
+    font-weight: 700;
+  }
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  font-size: 10pt;
+  font-weight: 700;
+  border: 2px solid $roxo !important;
+  margin: 55px 0 !important;
+}
+
+// footer
+#footer {
+  position: relative;
+  margin-top: 55px;
+  float: left;
+  width: 100%;
+  color: $branco;
+  background: url(../images/bgfooter.svg) center repeat-x;
+  background-size: cover;
+  height: 40pt;
+  .marlonassuncao {
+    position: absolute;
+    right: 30px;
+    display: block;
+    width: 20px;
+    top: 20px;
+    img {
+      display: block;
+      transition: all 0.5s;
+      opacity: 0.4;
+    }
+    &:hover {
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  #header {
+    .nav {
+      ul {
+        li {
+          a {
+            padding: 10px 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 992px) {
+  .btnav {
+    font-size: 24pt;
+    position: absolute;
+    z-index: 99;
+    top: 15px;
+    right: 20px;
+    display: block;
+    cursor: pointer;
+    color: $rosa;
+    &:hover {
+      color: $rosa;
+    }
+  }
+  #header {
+    height: 60px;
+    .logo {
+      margin-top: 0;
+      height: auto;
+      img {
+        min-width: 130px;
+        max-width: 130px;
+        margin: 0 auto;
+      }
+    }
+    .nav {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+      min-height: 352px;
+      margin-top: 20px;
+      left: 0;
+      padding-top: 130px;
+      background: $rosa;
+      ul {
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-right: 0;
+        padding: 0;
+        padding: 10px 0;
+        padding-bottom: 20px;
+        li {
+          clear: left;
+          width: 100%;
+          a {
+            display: block;
+            font-size: 18pt;
+            width: 100%;
+            padding: 10px;
+            text-align: left;
+            color: $branco;
+            text-align: center;
+            border: 0;
+            &:hover {
+              color: $branco;
+            }
+          }
+        }
+      }
+    }
+  }
+  #header .socials {
+    position: absolute;
+    left: 0;
+    top: -62px;
+  }
+  #contato {
+    p {
+      br {
+        display: none;
+      }
+    }
+    .form-control {
+      margin: 20px 0;
+    }
+  }
+}
